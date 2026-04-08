@@ -55,10 +55,10 @@ We reject the "cluttered" UI of traditional fintech. Arus follows an **Industria
 
 ## 📌 Repository Structure
 This showcase focuses on the **Core** and **Design System** layers:
-* `core/security/`: The heart of our data protection.
-* `core/ai/`: Prompt engineering and AI reasoning logic.
-* `core/hardware/`: Printer and peripheral management.
-* `designsystem/`: Custom UI components built from the ground up.
+* `SecurityManager.kt`: The heart of our data protection.
+* `ArusManager.kt`: Prompt engineering and AI reasoning logic.
+* `PinterManager.kt, ReportManager.kt and ExportManager.kt`: Printer and peripheral management.
+* `ui/theme`: Custom UI components built from the ground up.
 
 ---
 
