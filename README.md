@@ -22,7 +22,7 @@ We implemented **Kyber-768** to ensure that MSME data is secure even against fut
 * **SecurityManager:** Advanced implementation of Android Keystore, PBKDF2 Master Password hashing, and AES-GCM encryption.
 
 ### 🧠 2. Coco AI: Parallel Reasoning
-Powered by **Gemini 3 Flash**, our AI engine handles complex financial tasks through parallel reasoning.
+Powered by **Gemini 2.5 Flash**, our AI engine handles complex financial tasks through parallel reasoning.
 * **Voice-to-Action:** Parsing human language into atomic financial journals.
 * **Context-Aware Insights:** Real-time stock and revenue analysis without compromising speed.
 
@@ -57,7 +57,7 @@ We reject the "cluttered" UI of traditional fintech. Arus follows an **Industria
 This showcase focuses on the **Core** and **Design System** layers:
 * `SecurityManager.kt`: The heart of our data protection.
 * `ArusManager.kt`: Prompt engineering and AI reasoning logic.
-* `PinterManager.kt, ReportManager.kt and ExportManager.kt`: Printer and peripheral management.
+* `PrinterManager.kt, ReportManager.kt and ExportManager.kt`: Printer and peripheral management.
 * `ui/theme`: Custom UI components built from the ground up.
 
 ---
