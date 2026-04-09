@@ -36,7 +36,7 @@ object SecurityManager {
         if (!isRecovery) {
             getOrGenerateMasterAesKey()
         } else {
-            lockVault() // Panggil fungsi pembersih memori
+            lockVault() 
         }
     }
 
@@ -164,9 +164,9 @@ object SecurityManager {
             return true
 
         } catch (e: javax.crypto.AEADBadTagException) {
-            return false // Master Password salah
+            return false
         } catch (e: Exception) {
-            return false // Kegagalan sistem lainnya
+            return false
         }
     }
 
@@ -185,7 +185,7 @@ object SecurityManager {
                 )
                 return quantumKeyPair!!
             } catch (e: Exception) {
-                // Lanjut ke pembuatan key baru jika data rusak
+                
             }
         }
 
@@ -230,7 +230,7 @@ object SecurityManager {
                 cachedMasterAesKey = SecretKeySpec(aesKeyBytes, "AES")
                 return cachedMasterAesKey!!
             } catch (e: Exception) {
-                // Lanjut generate key baru
+                
             }
         }
 
