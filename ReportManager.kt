@@ -129,7 +129,7 @@ object ReportManager {
         period: ReportPeriod, audit: Triple<Long, Long, Long>, txs: List<TransactionModel>
     ): Uri = withContext(Dispatchers.IO) {
         val pdf = PdfDocument()
-        val pageInfo = PdfDocument.PageInfo.Builder(595, 842, 1).create() // Ukuran standar A4
+        val pageInfo = PdfDocument.PageInfo.Builder(595, 842, 1).create()
         var page = pdf.startPage(pageInfo)
         var canvas: Canvas = page.canvas
         val paint = Paint()
@@ -139,7 +139,6 @@ object ReportManager {
         val textPaint = Paint().apply { textSize = 10f; isAntiAlias = true }
         val headerTablePaint = Paint().apply { typeface = Typeface.DEFAULT_BOLD; textSize = 11f; color = android.graphics.Color.WHITE }
 
-        // --- Helper Fungsi untuk Menggambar Header Tabel ---
         fun drawTableHeader(currentY: Float) {
             paint.color = android.graphics.Color.parseColor("#064869")
             canvas.drawRect(40f, currentY, 555f, currentY + 25f, paint)
