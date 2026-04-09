@@ -64,14 +64,14 @@ class PrinterManager(private val context: Context) {
     companion object {
         private val SPP_UUID: UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB")
 
-        private val INIT = byteArrayOf(0x1B, 0x40) // Initialize
+        private val INIT = byteArrayOf(0x1B, 0x40) 
         private val ALIGN_LEFT = byteArrayOf(0x1B, 0x61, 0x00)
         private val ALIGN_CENTER = byteArrayOf(0x1B, 0x61, 0x01)
         private val ALIGN_RIGHT = byteArrayOf(0x1B, 0x61, 0x02)
         private val BOLD_ON = byteArrayOf(0x1B, 0x45, 0x01)
         private val BOLD_OFF = byteArrayOf(0x1B, 0x45, 0x00)
-        private val DOUBLE_HEIGHT = byteArrayOf(0x1B, 0x21, 0x10) // Text size * 2
-        private val NORMAL_SIZE = byteArrayOf(0x1B, 0x21, 0x00) // Reset text size
+        private val DOUBLE_HEIGHT = byteArrayOf(0x1B, 0x21, 0x10) 
+        private val NORMAL_SIZE = byteArrayOf(0x1B, 0x21, 0x00)
         private val NEW_LINE = byteArrayOf(0x0A)
         private val DASH_LINE = "--------------------------------\n".toByteArray()
         private val EQUAL_LINE = "================================\n".toByteArray()
@@ -99,7 +99,7 @@ class PrinterManager(private val context: Context) {
             if (_isConnected.value && bluetoothSocket?.remoteDevice?.address == deviceAddress) return@withContext true
 
             disconnect()
-            bluetoothAdapter?.cancelDiscovery() // WAJIB! Biar koneksi lebih cepat
+            bluetoothAdapter?.cancelDiscovery() 
 
             val device = try {
                 bluetoothAdapter?.getRemoteDevice(deviceAddress)
@@ -283,7 +283,7 @@ class PrinterManager(private val context: Context) {
             outputStream?.close()
             bluetoothSocket?.close()
         } catch (e: Exception) {
-            // Abaikan error saat menutup socket
+
         } finally {
             outputStream = null
             bluetoothSocket = null
